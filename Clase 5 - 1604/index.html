@@ -1,65 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contenedores Semanticos</title>
+    <title>Tablas</title>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
-    <header> <!-- Este es el menu superior de la pagina web-->
-        <h1>Mi sitio web</h1>
-        <nav> <!-- agrupamos links que son para navegar entre partes de mi sitio u otro sitio-->
-            <ul>
-                <li><a href="./pagina2">ir a pagina 1</a></li>
-                <li><a href="./pagina3">ir a pagina 2</a></li>
-                <li><a href="./pagina4">ir a pagina 3</a></li>
-            </ul>
-        </nav>
-    </header><!-- fin menu superior -->
+    <h1>Tablas en HTML</h1>
 
-    <main> <!-- principal (contenido)-->
+    <h2>Tabla "estandar"</h2>
+    <table border="1"> <!-- Para que veamos un borde en cada celda de la tabla-->
+        <caption>Ejemplo de tabla de 2 filas y 3 columnas</caption> <!-- como el "titulo" de la tabla -->
+        <tr> <!-- Fila -->
+            <td></td> <!-- Columna (celda)-->
+            <td></td> <!-- Columna (celda)-->
+            <td></td> <!-- Columna (celda)-->
+        </tr>
+        <tr>
+            <td></td> <!-- Columna (celda)-->
+            <td></td> <!-- Columna (celda)-->
+            <td></td> <!-- Columna (celda)-->
+        </tr>
+    </table>
 
-    </main>
+    <table border="1">
+        <caption>Tabla de productos y servicios</caption>
+        <tr> <!-- fila de la tabla -->
+            <th colspan="2">Producto 1</th> <!-- table header (cabecera de la celda)-->
+            <th>producto 2</th>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>dato 6</td>
+            <td rowspan="2">dato 5</td>
+        </tr>
+        <tr>
+            <td colspan="2">dato 7</td>
+        </tr>
+    </table>
 
-    <footer> <!-- Pie de pagina -->
-            <a href="./pagina4">link 3 del footer</a>
-            <a href="./pagina4">link 3 del footer</a>
-            <a href="./pagina4">link 3 del footer</a>
-    </footer>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
