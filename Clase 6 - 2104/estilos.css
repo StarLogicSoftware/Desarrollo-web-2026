@@ -1,0 +1,28 @@
+/* Selector universal (cambia todas las etiquetas HTML que se encuentre*/
+*{
+    color: gray; /* color de la letra */
+
+    background-color: green; /* color del fondo del contenedor del texto */
+
+    font-family: 'Courier New', Courier, monospace; /* fuente del texto (tipo de letra) */
+
+    font-size: 20px; /* tamaño de la letra (no olvidar el px al final del numero, antes del ; */
+
+    text-decoration: underline; /* texto tachado, subrayado o quitar efecto con :none */
+}
+
+/* Selector combinado (aplica a los ul, a los ol y a los a */
+ul, ol, a{
+    color: rebeccapurple;
+}
+
+/* Selector de etiqueta (todos los parrafos del HTML) */
+p{
+    color: green;
+}
+
+/* Tambien sirven para etiquetas semánticas */
+footer{
+    background-color: gray;
+}
+
