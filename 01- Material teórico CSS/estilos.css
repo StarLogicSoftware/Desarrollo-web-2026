@@ -1,0 +1,151 @@
+/* =====================
+   RESET BÁSICO
+   ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+   BASE
+   ===================== */
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: linear-gradient(180deg, #e8f4fc 0%, #f0f8ff 100%);
+  color: #1a2e3b;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+header {
+  background: linear-gradient(135deg, #0d3b6e 0%, #1a6ea8 60%, #5bb8e8 100%);
+  color: #ffffff;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   NAV
+   ===================== */
+nav {
+  background: linear-gradient(90deg, #1a6ea8 0%, #2a9fd6 100%);
+  padding: 10px 40px;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  color: #e8f6ff;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 0 12px;
+  padding: 6px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #e8f6ff;
+}
+
+/* =====================
+   MAIN
+   ===================== */
+main {
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* =====================
+   SECCIONES
+   ===================== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 1.6em;
+  color: #0d3b6e;
+  border-bottom: 3px solid #1a6ea8;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+/* =====================
+   ARTÍCULOS
+   ===================== */
+article {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  background: linear-gradient(180deg, #ffffff 0%, #eaf5fb 100%);
+  border: 1px solid #a8d4ea;
+  border-radius: 6px;
+  padding: 14px;
+  margin: 0 10px 20px 0;
+  text-align: center;
+}
+
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+article h3 {
+  font-size: 1em;
+  color: #0d3b6e;
+  margin-bottom: 6px;
+}
+
+article p {
+  font-size: 0.9em;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+article a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  background: linear-gradient(90deg, #1a6ea8 0%, #2a9fd6 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85em;
+  border-radius: 4px;
+}
+
+article a:hover {
+  background: linear-gradient(90deg, #0d3b6e 0%, #1a6ea8 100%);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  background: linear-gradient(135deg, #0d3b6e 0%, #1a6ea8 100%);
+  color: #e8f6ff;
+  text-align: center;
+  padding: 24px 40px;
+  font-size: 0.9em;
+  line-height: 2;
+}
+
+footer a {
+  color: #a8d4ea;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffffff;
+}

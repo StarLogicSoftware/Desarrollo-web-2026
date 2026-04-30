@@ -1,0 +1,101 @@
+============================
+SITIO: Bazar El Rincón
+============================
+
+--- ENCABEZADO ---
+Título del sitio: Bazar El Rincón
+
+Menú de navegación:
+- Inicio (link a #inicio)
+- Servicios (link a #servicios)
+- Productos (link a #productos)
+- Contacto (link a #contacto)
+
+
+--- SECCIÓN: Nuestros Servicios ---
+
+Artículo 1:
+  Imagen: 200x150 (placeholder)
+  Título: Asesoramiento personalizado
+  Descripción: Te ayudamos a elegir el regalo perfecto para cada ocasión.
+  Precio: $500
+  Link: Ver más
+
+Artículo 2:
+  Imagen: 200x150 (placeholder)
+  Título: Envío a domicilio
+  Descripción: Llevamos tus compras directo a tu puerta en el día.
+  Precio: $300
+  Link: Ver más
+
+Artículo 3:
+  Imagen: 200x150 (placeholder)
+  Título: Envoltura de regalo
+  Descripción: Presentación especial con papel y moño incluidos.
+  Precio: $150
+  Link: Ver más
+
+
+--- SECCIÓN: Productos del Bazar ---
+
+Artículo 1:
+  Imagen: 200x150 (placeholder)
+  Título: Vela aromática
+  Descripción: Vela de soja con aroma a lavanda, 200 g.
+  Precio: $1.200
+  Link: Ver más
+
+Artículo 2:
+  Imagen: 200x150 (placeholder)
+  Título: Taza de cerámica
+  Descripción: Taza artesanal pintada a mano, 350 ml.
+  Precio: $900
+  Link: Ver más
+
+Artículo 3:
+  Imagen: 200x150 (placeholder)
+  Título: Portarretratos de madera
+  Descripción: Marco rústico para foto 10x15 cm.
+  Precio: $750
+  Link: Ver más
+
+Artículo 4:
+  Imagen: 200x150 (placeholder)
+  Título: Cuaderno decorado
+  Descripción: Cuaderno A5 con tapa estampada, 120 hojas.
+  Precio: $600
+  Link: Ver más
+
+Artículo 5:
+  Imagen: 200x150 (placeholder)
+  Título: Jabón artesanal
+  Descripción: Jabón de glicerina con pétalos de rosa, 80 g.
+  Precio: $450
+  Link: Ver más
+
+Artículo 6:
+  Imagen: 200x150 (placeholder)
+  Título: Difusor de aromas
+  Descripción: Difusor con palitos de ratán y esencia de sandía.
+  Precio: $1.500
+  Link: Ver más
+
+Artículo 7:
+  Imagen: 200x150 (placeholder)
+  Título: Maceta pintada
+  Descripción: Maceta de barro decorada a mano, 12 cm de diámetro.
+  Precio: $800
+  Link: Ver más
+
+Artículo 8:
+  Imagen: 200x150 (placeholder)
+  Título: Caja de té surtido
+  Descripción: Selección de 20 saquitos de distintas variedades.
+  Precio: $1.100
+  Link: Ver más
+
+
+--- FOOTER ---
+Bazar El Rincón — Dirección: Av. Principal 123, Buenos Aires
+Contacto: info@bazarelrincon.com
+© 2026 Bazar El Rincón. Todos los derechos reservados.
