@@ -1,0 +1,17 @@
+
+
+article{
+    background-color: gray;
+    width: 800px;
+}
+
+p{
+    width: 50%;
+    background-color: red;
+    display: inline-block;
+}
+
+img{
+    display: inline-block;
+    width: 40%;
+}
