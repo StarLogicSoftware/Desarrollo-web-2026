@@ -330,3 +330,140 @@ div {
 | `background`            | Atajo para todas las propiedades anteriores       |
 
 ---
+
+## 4. `float` — flotado de imágenes
+
+`float` permite que una imagen (u otro elemento) se desplace hacia uno de los lados del contenedor y que el texto fluya alrededor de ella. Es el uso original y más clásico de esta propiedad.
+
+```css
+img { float: left; }    /* la imagen se va a la izquierda, el texto la rodea por la derecha */
+img { float: right; }   /* la imagen se va a la derecha, el texto la rodea por la izquierda */
+img { float: none; }    /* sin flotado (valor por defecto) */
+```
+
+---
+
+### Imagen flotada a la izquierda
+
+```html
+<img src="foto.jpg" alt="Paisaje" class="foto-izquierda">
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+  nisi vel nisl tincidunt, in tincidunt nisl tincidunt. Praesent euismod
+  nisi vel nisl tincidunt. El texto fluye automáticamente alrededor de
+  la imagen ocupando el espacio disponible a su derecha.
+</p>
+```
+
+```css
+.foto-izquierda {
+  float: left;
+  width: 200px;
+  margin: 0 16px 8px 0;  /* espacio entre la imagen y el texto */
+}
+```
+
+```
+[ imagen ]  Lorem ipsum dolor sit amet,
+[ imagen ]  consectetur adipiscing elit.
+[ imagen ]  Sed euismod nisi vel nisl.
+            Praesent más texto aquí...
+```
+
+---
+
+### Imagen flotada a la derecha
+
+```html
+<img src="foto.jpg" alt="Retrato" class="foto-derecha">
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+  nisi vel nisl tincidunt, in tincidunt nisl tincidunt. El texto ocupa
+  el espacio disponible a la izquierda de la imagen.
+</p>
+```
+
+```css
+.foto-derecha {
+  float: right;
+  width: 200px;
+  margin: 0 0 8px 16px;  /* espacio entre el texto y la imagen */
+}
+```
+
+```
+Lorem ipsum dolor sit amet,  [ imagen ]
+consectetur adipiscing elit. [ imagen ]
+Sed euismod nisi vel nisl.   [ imagen ]
+Praesent más texto aquí...
+```
+
+---
+
+### `clear` — cancelar el flotado
+
+Cuando el contenido siguiente no debe rodear la imagen, se usa `clear` para forzar que el elemento baje por debajo de todos los flotantes.
+
+```css
+.seccion-siguiente {
+  clear: left;    /* baja debajo de los flotantes a la izquierda */
+}
+
+.seccion-siguiente {
+  clear: right;   /* baja debajo de los flotantes a la derecha */
+}
+
+.seccion-siguiente {
+  clear: both;    /* baja debajo de cualquier flotante (el más usado) */
+}
+```
+
+---
+
+### Problema del contenedor colapsado y el clearfix
+
+Cuando todos los hijos de un contenedor están flotados, el contenedor **colapsa** (su altura queda en 0 porque los flotantes están fuera del flujo).
+
+**Solución moderna — `overflow: hidden` o `display: flow-root`:**
+
+```css
+.contenedor {
+  overflow: hidden;   /* contiene los flotantes */
+}
+
+/* Alternativa semántica más limpia */
+.contenedor {
+  display: flow-root;
+}
+```
+
+**Solución clásica — clearfix con pseudoelemento:**
+
+```css
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+```
+
+```html
+<div class="clearfix">
+  <img src="foto.jpg" alt="..." class="foto-izquierda">
+  <p>Texto que rodea la imagen...</p>
+</div>
+<!-- El div ahora envuelve correctamente a la imagen flotada -->
+```
+
+---
+
+### Cuándo usar `float` hoy
+
+`float` fue durante años la herramienta principal para crear layouts de columnas, pero actualmente **Flexbox y Grid** cumplen ese rol de forma más predecible. El uso recomendado de `float` hoy es:
+
+- Envolver texto alrededor de imágenes o figuras (su propósito original).
+- Pequeños elementos decorativos que deben integrarse en el flujo del texto.
+
+Para layouts de columnas o grillas, preferir `display: flex` o `display: grid`.
+
+---
