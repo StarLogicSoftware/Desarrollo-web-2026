@@ -1,0 +1,95 @@
+aside{
+    background-color: green;
+    width: 30%;
+}
+
+article{
+    background-color: tomato;
+    width: 70%;
+}
+
+article img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav{
+    background-color: forestgreen;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.item {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor {
+    background-color: gray;
+    height: 500px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+
+
+
+    
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: start;
+
+    flex-wrap: nowrap;
+    align-content: end;
+
+    }
+    */
