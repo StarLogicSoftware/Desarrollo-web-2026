@@ -1,0 +1,65 @@
+.contenedor{
+    background-color: darkolivegreen;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 50px 120px;
+    grid-template-columns: 60px 1fr;
+    /* grid-template: 50px 120px / 100px 200px; */
+
+    height: 300px;
+    align-items: end;
+    justify-items: center;
+    place-items: end center; /* align justify*/
+
+    align-content: center;
+    justify-content: center;
+    place-content: start start;
+
+}
+
+
+.item{
+    background-color: mediumseagreen;
+    color: white;
+    font-weight: bold;
+}
+
+.item-1{
+    align-self: center;
+    justify-self: center;
+    place-self: center center;
+}
+
+
+
+/* CELDAS IRREGULARES */
+.cajita{
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 60px 400px 45px;
+    grid-template-areas: "head head foot" 
+                         "asid mainer mainer"
+                         "foot foot foot";
+}
+
+
+
+header{
+    background-color: violet;
+    grid-area: head;
+}
+
+main{
+    background-color: aqua;
+    grid-area: mainer;
+}
+
+footer{
+    background-color: brown;
+    grid-area: foot;
+}
+
+aside{
+    background-color: darkslateblue;
+    grid-area: asid;
+}
