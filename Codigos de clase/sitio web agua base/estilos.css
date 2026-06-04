@@ -47,8 +47,12 @@ nav a {
 /* Seccion hero */
 
 .hero {
-    background: #6e6ee0;
-    background: linear-gradient(90deg, rgba(110, 110, 224, 1) 35%, rgba(4, 179, 214, 1) 100%);
+    background-color: #6e6ee0;
+    background-image: url("https://aguagarcia.com.ar/wp-content/uploads/2024/11/MG_8511-scaled.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 90vh;
     padding: 10px 35px;
     /* propiedades flex */
@@ -71,6 +75,15 @@ nav a {
     text-shadow: 0 0 3px rgb(0, 0, 0);
     box-shadow: 5px 5px 6px rgb(140, 140, 208);
     border: 5px solid rgb(1, 1, 177);
+}
+
+.boton:hover{
+    background-color: rgb(234, 138, 12);
+    transform: scale(1.1) translateY(20px) rotate(10deg);
+}
+
+.boton:active{
+    transform: scale(0.9);
 }
 
 main {
