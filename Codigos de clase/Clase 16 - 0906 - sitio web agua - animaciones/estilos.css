@@ -1,0 +1,317 @@
+/* ==========================================================================
+   ESTILOS GENERALES (Reset básico)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2b3a42;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   CABECERA (HEADER) Y MENÚ DE NAVEGACIÓN (FLEXBOX)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, #0f3d59, #1a5f7a);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #00a8cc;
+}
+
+header p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    box-shadow: 0 4px 12px rgba(15, 61, 89, 0.08);
+}
+
+nav a {
+    color: #1a5f7a;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #00a8cc;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO (DEGRADADO Y FLEXBOX)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(135deg, #0f3d59, #00a8cc);
+    height: 60vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 650px;
+    color: #e8f4f8;
+}
+
+.boton {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00a8cc, #0f3d59);
+    padding: 15px 35px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.boton:hover {
+    background: #0f3d59;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL (MAIN Y DISEÑO DE TARJETAS CON GRID)
+   ========================================================================== */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+/* Títulos de sección */
+main section h2 {
+    font-size: 2.2rem;
+    color: #0f3d59;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main section {
+    margin-bottom: 80px;
+}
+
+/* Contenedores de rejilla (Grid) */
+.grid-tres-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.grid-cuatro-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* Estilo general para las tarjetas */
+main section article {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 61, 89, 0.05);
+    border-top: 5px solid #00a8cc;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main section article h3 {
+    font-size: 1.3rem;
+    color: #1a5f7a;
+}
+
+main section article p {
+    color: #5a6e79;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   SECCIÓN 1: IMPORTANCIA
+   ========================================================================== */
+#importancia article {
+    border-top: 5px solid #1a5f7a;
+}
+
+#importancia strong {
+    color: #0f3d59;
+}
+
+/* ==========================================================================
+   SECCIÓN 2: MÉTODOS DE PURIFICACIÓN
+   ========================================================================== */
+#metodos article {
+    border-top: 5px solid #00a8cc;
+}
+
+#metodos article p:last-of-type {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    background-color: #e8f4f8;
+    color: #1a5f7a;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* ==========================================================================
+   SECCIÓN 3: CONSEJOS (DISEÑO GRID COMBINADO CON ASIDE)
+   ========================================================================== */
+.consejos-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    width: 100%;
+}
+
+aside.sabias-que {
+    background: linear-gradient(135deg, #1a5f7a, #0f3d59);
+    color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 61, 89, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+aside.sabias-que h3 {
+    font-size: 1.6rem;
+    color: #00a8cc;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+aside.sabias-que p {
+    font-size: 14px;
+    color: #e8f4f8;
+}
+
+aside.sabias-que strong {
+    color: #ffffff;
+}
+
+/* Grid interna para consejos */
+.grid-consejos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-consejos article {
+    border-top: none;
+    border-left: 5px solid #00a8cc;
+    padding: 20px 22px;
+    box-shadow: 0 4px 12px rgba(15, 61, 89, 0.03);
+}
+
+.grid-consejos article h3 {
+    font-size: 1.1rem;
+    color: #1a5f7a;
+}
+
+/* ==========================================================================
+   SECCIÓN 4: EL AGUA EN NÚMEROS
+   ========================================================================== */
+#datos article {
+    text-align: center;
+    border-top: none;
+    background: linear-gradient(180deg, #ffffff, #e8f4f8);
+    border: 1px solid rgba(0, 168, 204, 0.1);
+}
+
+#datos article h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #00a8cc;
+}
+
+#datos article p {
+    color: #0f3d59;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #0f3d59;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #00a8cc;
+}
+
+footer p {
+    font-size: 14px;
+    color: #a8dadc;
+    margin-bottom: 10px;
+}
+
+footer p strong {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   BOTÓN IR ARRIBA
+   ========================================================================== */
+.boton-ir-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a5f7a;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(15, 61, 89, 0.2);
+    font-size: 18px;
+    z-index: 99;
+}
+
+.boton-ir-arriba:hover {
+    background-color: #00a8cc;
+}
