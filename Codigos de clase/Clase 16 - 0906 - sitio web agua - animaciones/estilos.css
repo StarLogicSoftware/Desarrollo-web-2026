@@ -53,6 +53,9 @@ nav a {
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
+    box-shadow: 5px 5px 10px black;
+ 
+    transition: all 0.4s;
 }
 
 nav a:hover {
@@ -78,6 +81,41 @@ nav a:hover {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 800;
+    /* Aplicamos la animación 'ola': duración de 6 segundos. Usamos 'linear' como base
+       porque definiremos suavizados personalizados entre cada keyframe para un vaivén perfecto. */
+    animation: ola 6s linear infinite;
+    /* display: inline-block es indispensable para que las transformaciones (rotar y trasladar) se apliquen correctamente */
+    display: inline-block;
+    /* Le indicamos al navegador que prepare la GPU para renderizar las transformaciones con suavidad extrema */
+    will-change: transform;
+}
+
+/* Animación fluida de 5 puntos clave que simula flotar sobre una ola sin saltos bruscos */
+@keyframes ola {
+    0% {
+        /* Inicio: posición neutra y nivelada.
+           Usamos 'ease-out' para que el inicio de la subida sea fluido y desacelere al acercarse al 25% */
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    25% {
+        /* Subiendo la ola: elevación con inclinación hacia arriba.
+           Usamos 'ease-in-out' para que la transición hacia la cima sea súper fluida */
+        transform: translate3d(0, -15px, 0) rotate(2deg);
+    }
+    50% {
+        /* Cresta de la ola: punto más alto, nivelado.
+           Usamos 'ease-in-out' para salir de la cima con total delicadeza */
+        transform: translate3d(0, -30px, 0) rotate(0deg);
+    }
+    75% {
+        /* Bajando la ola: descenso con inclinación hacia abajo.
+           Usamos 'ease-in' para acelerar la bajada y reincorporarse con suavidad al origen */
+        transform: translate3d(0, -12px, 0) rotate(-2deg);
+    }
+    100% {
+        /* Fin del ciclo: retorna con suavidad al estado inicial */
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
 }
 
 .hero p {

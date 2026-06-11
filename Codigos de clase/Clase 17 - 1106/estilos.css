@@ -1,0 +1,33 @@
+div {
+    background-color: cornflowerblue;
+
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+}
+
+article {
+    width: 200px;
+    height: 200px;
+    color: brown;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@media (width <=425px) {
+    div {
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+}
