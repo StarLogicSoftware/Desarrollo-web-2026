@@ -1,54 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verde Moderno | Productos</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
-    <header>
-        HEADER
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">V</span>
+        <div>
+          <h1>Verde Moderno</h1>
+          <p>Diseño sostenible y productos saludables</p>
+        </div>
+      </div>
+      <nav class="top-menu" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </header>
-    <div class="principal">
-        <aside class="aside-izquierda">
-            ASIDE IZQUIERDA
-        </aside>
-        <main>
-            <article>
-                <h3>Producto 1</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-            <article>
-                <h3>Producto 2</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-            <article>
-                <h3>Producto 3</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-            <article>
-                <h3>Producto 4</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-            <article>
-                <h3>Producto 5</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-            <article>
-                <h3>Producto 6</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </article>
-        </main>
-        <aside class="aside-derecha">
-            ASIDE DERECHA
-        </aside>
-    </div>
-    <footer>
-        FOOTER
-    </footer>
-</body>
 
+    <div class="layout">
+      <nav class="sidebar" aria-label="Menú lateral">
+        <p class="sidebar-title">Menú</p>
+        <ul>
+          <li><a href="#productos">Catálogo</a></li>
+          <li><a href="#empresa">Nuestra historia</a></li>
+          <li><a href="#contacto">Soporte</a></li>
+          <li><a href="#promocion">Promociones</a></li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <section class="hero">
+          <p class="eyebrow">Renueva tu estilo verde</p>
+          <h2 id="productos">Productos destacados</h2>
+          <p>Elige soluciones ecológicas, embalajes naturales y herramientas de bienestar para tu hogar moderno.</p>
+        </section>
+
+        <section class="product-grid" aria-label="Lista de productos">
+          <article class="product-card">
+            <span class="product-tag">Nuevo</span>
+            <h3>Set de jardinería</h3>
+            <p>Herramientas duraderas, semillas orgánicas y accesorios para tu espacio verde.</p>
+            <div class="card-actions">
+              <button class="btn detail">Detalles</button>
+              <button class="btn buy">Comprar</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-tag">Eco</span>
+            <h3>Botellas reutilizables</h3>
+            <p>Diseño premium, materiales libres de tóxicos y colores inspirados en la naturaleza.</p>
+            <div class="card-actions">
+              <button class="btn detail">Detalles</button>
+              <button class="btn buy">Comprar</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-tag">Popular</span>
+            <h3>Lámpara de fibra</h3>
+            <p>Iluminación cálida con fibra natural y una silueta minimalista para espacios verdes.</p>
+            <div class="card-actions">
+              <button class="btn detail">Detalles</button>
+              <button class="btn buy">Comprar</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-tag">Oferta</span>
+            <h3>Pack energía verde</h3>
+            <p>Baterías recargables y paneles compactos para carga sostenible en el hogar.</p>
+            <div class="card-actions">
+              <button class="btn detail">Detalles</button>
+              <button class="btn buy">Comprar</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="info-section" id="empresa">
+          <div>
+            <h2>Empresa</h2>
+            <p>Somos un estudio de diseño verde que combina estética moderna con materiales responsables. Cada producto tiene un propósito: cuidar el planeta sin sacrificar estilo.</p>
+          </div>
+          <div class="highlight">
+            <p><strong>Visión:</strong> convertir espacios en refugios saludables.</p>
+          </div>
+        </section>
+
+        <section class="info-section" id="contacto">
+          <div>
+            <h2>Contacto</h2>
+            <p>¿Tienes una idea o quieres asesoría? Escríbenos y te acompañamos en la transformación de tu hogar.</p>
+          </div>
+          <address>
+            <p>Correo: <a href="mailto:info@verdemoderno.com">info@verdemoderno.com</a></p>
+            <p>Teléfono: +57 300 123 4567</p>
+          </address>
+        </section>
+      </main>
+
+      <aside class="side-panel" id="promocion">
+        <div class="panel-head">
+          <h2>Consejo rápido</h2>
+          <p>Agrega plantas nativas para mejorar la calidad del aire y el confort visual.</p>
+        </div>
+        <ul>
+          <li>Materiales 100% reciclables</li>
+          <li>Envío gratis en pedidos superiores a $120</li>
+          <li>Soporte de diseño de interiores</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Verde Moderno</h3>
+          <p>Creando ambientes más sanos con soluciones sostenibles y diseño contemporáneo.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <a href="#productos">Productos</a>
+          <a href="#empresa">Empresa</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+      <p class="footer-note">© 2026 Verde Moderno. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</body>
 </html>
