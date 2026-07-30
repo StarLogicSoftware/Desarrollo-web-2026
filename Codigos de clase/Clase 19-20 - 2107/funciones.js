@@ -38,5 +38,32 @@ let cuentaComplicada = function (numero, funcionUtil){
     return resultado
 }
 
-console.log(  cuentaComplicada(5, sumar)   )
 console.log(  cuentaComplicada(5, multiplicar)   )
+
+
+
+
+
+
+
+
+
+// agregarAlCarrito('zapatillas')
+// agregarAlCarrito('paraguas')
+
+// multiplicar(3,5)
+
+// console.log('holisss')
+
+// // declarar la funcion
+// function agregarAlCarrito (producto){
+//     console.log('holisss')
+// }
+
+// function multiplicar (numero, multiplicador) {
+//     return numero * multiplicador 
+// }
+
+let funcionEnVariable = () => {
+
+}
