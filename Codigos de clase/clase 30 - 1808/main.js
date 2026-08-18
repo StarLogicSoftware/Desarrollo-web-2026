@@ -9,3 +9,8 @@ tituloh1.addEventListener('click', () => {
 tituloh1.addEventListener('mouseleave', () => {
     tituloh1.textContent = 'el mouse me toco!'
 })
+
+document.addEventListener('load', ()=>{
+
+})
+
