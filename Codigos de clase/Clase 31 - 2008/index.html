@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la práctica de manipulación del DOM. -->
+    <main class="panel-tareas">
+        <!-- Columna izquierda: formulario para crear una nueva tarea. -->
+        <section class="seccion-formulario">
+            <p class="etiqueta-superior">Práctica de DOM</p>
+            <h1>Lista de tareas</h1>
+            <p class="texto-introduccion">Agrega una tarea para organizar tus pendientes.</p>
+
+            <!-- Más adelante puedes escuchar el evento submit con JavaScript. -->
+            <form id="formulario-tareas">
+                <!-- La etiqueta está vinculada al input mediante el atributo for. -->
+                <label for="titulo-tarea">Título de la tarea</label>
+
+                <!-- Este input será uno de los elementos que podrás consultar desde el DOM. -->
+                <input
+                    type="text"
+                    id="titulotarea"
+                    name="titulotarea"
+                    placeholder="Ejemplo: estudiar JavaScript"
+                    autocomplete="off"
+                >
+
+                <!-- Grupo de botones del formulario. -->
+                <div class="acciones-formulario">
+                    <!-- Este botón enviará el formulario cuando agregues tu lógica JavaScript. -->
+                    <button class="boton boton-principal" type="submit">Guardar</button>
+
+                    <!-- type="reset" limpia los campos del formulario usando HTML. -->
+                    <button class="boton boton-secundario" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Columna derecha: aquí aparecerán las tareas creadas dinámicamente. -->
+        <section class="seccion-lista" aria-labelledby="titulo-lista-tareas">
+            <div class="encabezado-seccion">
+                <p class="etiqueta-superior">Pendientes</p>
+                <h2 id="titulo-lista-tareas">Mis tareas</h2>
+            </div>
+
+            <!--
+                Este ul contiene tareas de ejemplo para mostrar el diseño.
+                Luego puedes agregar nuevos li desde JavaScript.
+            -->
+            <ul id="lista-tareas" class="lista-tareas">
+                <li class="elemento-tarea">Repasar selectores del DOM</li>
+                <li class="elemento-tarea">Practicar eventos de formularios</li>
+                <li class="elemento-tarea">Crear elementos con JavaScript</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="principal.js"></script>
+</body>
+</html>
