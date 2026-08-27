@@ -16,3 +16,18 @@ const datosQueReciboDelServer = JSON.parse(datosParaEnviar)
 
 console.log(datosParaEnviar)
 console.log(datosLluvia)
+
+
+
+const arrayTareas = []
+
+const tareaIndividual = {
+    titulo:'titulo del formulario',
+    descripcion: 'descripcion del formulario'
+}
+
+arrayTareas.push(tareaIndividual)
+
+// codigo para actualizar el HTML
+
+// localstorage
