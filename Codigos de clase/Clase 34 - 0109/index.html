@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Contenedor principal de la lista de tareas -->
+    <main class="contenedor">
+        <!-- Sección superior que contiene el formulario -->
+        <section class="seccion-formulario">
+            <h1>Lista de tareas</h1>
+            <p>Agregá una nueva tarea para organizar tus actividades.</p>
+
+            <!-- Formulario para ingresar los datos de una tarea -->
+            <form action="#" method="post">
+                <div class="campo-formulario">
+                    <label for="titulo-tarea">Título de la tarea</label> <!--!Quitar - del name-->
+                    <input type="text" id="titulo-tarea" name="titulotarea" placeholder="Ejemplo: Estudiar HTML" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="descripcion-tarea">Descripción de la tarea</label><!--!Quitar - del name-->
+                    <textarea id="descripcion-tarea" name="descripciontarea" rows="4" placeholder="Escribí una breve descripción" required></textarea>
+                </div>
+
+                <button type="submit">Agregar tarea</button>
+            </form>
+        </section>
+
+        <!-- Sección inferior que muestra las tareas guardadas -->
+        <section class="seccion-tareas">
+            <h2>Tareas pendientes</h2>
+
+            <!-- Listado desordenado con tareas de ejemplo -->
+            <ul id="listaTareas" class="lista-tareas"> <!--! Agregué un id al listado que no estaba-->
+               
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
