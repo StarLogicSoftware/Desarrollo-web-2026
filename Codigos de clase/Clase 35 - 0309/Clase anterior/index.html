@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verde Studio</title>
+    <style>
+      :root {
+        --verde-oscuro: #031926;
+        --verde-medio: #468189;
+        --verde-claro: #77ACA2;
+        --opal: #9DBEBB;
+        --champagne: #F4E9CD;
+        --blanco: #ffffff;
+        --gris-fondo: #e9eceb;
+        --gris-texto: #2d2d2d;
+        --gris-suave: #dfe5e2;
+        --borde: rgba(3, 25, 38, 0.9);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--gris-fondo);
+        color: var(--gris-texto);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .contenedor {
+        width: min(1200px, calc(100% - 48px));
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .encabezado {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 18px 38px;
+        background: rgba(255, 255, 255, 0.15);
+        border-bottom: 2px solid var(--borde);
+      }
+
+      .logo {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 3rem);
+        font-weight: 900;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        color: var(--verde-oscuro);
+      }
+
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .menu a {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gris-texto);
+      }
+
+      .boton-menu {
+        padding: 12px 22px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: transparent;
+        color: var(--gris-texto);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        padding: 72px 20px 80px;
+        border-bottom: 2px solid var(--borde);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-contenido {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(3.5rem, 7vw, 8rem);
+        line-height: 0.9;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        color: var(--verde-oscuro);
+      }
+
+      .hero p {
+        margin: 26px auto 0;
+        max-width: 600px;
+        font-size: clamp(1.1rem, 2vw, 1.6rem);
+        line-height: 1.5;
+        color: rgba(45, 45, 45, 0.8);
+      }
+
+      .principal {
+        margin-top: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 210px;
+        min-height: 54px;
+        padding: 0 26px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: transparent;
+        color: var(--gris-texto);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .seccion {
+        padding: 52px 40px 42px;
+        border-bottom: 2px solid var(--borde);
+      }
+
+      .titulo-seccion {
+        margin: 0 0 34px;
+        text-align: center;
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        letter-spacing: -0.07em;
+        text-transform: uppercase;
+        color: var(--verde-oscuro);
+      }
+
+      .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 26px;
+      }
+
+      .servicio {
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        padding: 24px 18px;
+        background: rgba(255, 255, 255, 0.15);
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .icono-servicio {
+        width: 100%;
+        height: 120px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(119, 172, 162, 0.12), rgba(70, 129, 137, 0.15));
+        position: relative;
+        overflow: hidden;
+      }
+
+      .icono-servicio::before,
+      .icono-servicio::after {
+        content: "";
+        position: absolute;
+        inset: 16px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        transform: rotate(-12deg);
+      }
+
+      .icono-servicio::after {
+        transform: rotate(12deg);
+      }
+
+      .servicio h3 {
+        margin: 18px 0 8px;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .servicio p {
+        margin: 0;
+        line-height: 1.6;
+        color: rgba(45, 45, 45, 0.8);
+      }
+
+      .contenido-doble {
+        display: grid;
+        grid-template-columns: 1.1fr 1.4fr;
+        gap: 28px;
+        margin-top: 28px;
+      }
+
+      .tarjeta {
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .bloque-texto {
+        padding: 18px 20px 20px;
+      }
+
+      .bloque-texto h3 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 3vw, 2.6rem);
+        text-transform: uppercase;
+        letter-spacing: -0.06em;
+      }
+
+      .linea {
+        height: 2px;
+        width: 100%;
+        background: var(--borde);
+        margin-bottom: 18px;
+      }
+
+      .mini-lista {
+        display: grid;
+        gap: 14px;
+      }
+
+      .mini-lista span {
+        display: block;
+        width: 100%;
+        height: 18px;
+        border-radius: 10px;
+        background: rgba(3, 25, 38, 0.12);
+      }
+
+      .mapa {
+        min-height: 230px;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(119, 172, 162, 0.2), rgba(70, 129, 137, 0.2));
+      }
+
+      .mapa::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, transparent 0 14%, rgba(3,25,38,0.18) 14% 15%, transparent 15% 30%, rgba(3,25,38,0.18) 30% 31%, transparent 31% 46%, rgba(3,25,38,0.18) 46% 47%, transparent 47% 62%, rgba(3,25,38,0.18) 62% 63%, transparent 63% 100%),
+          linear-gradient(0deg, transparent 0 18%, rgba(3,25,38,0.18) 18% 19%, transparent 19% 34%, rgba(3,25,38,0.18) 34% 35%, transparent 35% 50%, rgba(3,25,38,0.18) 50% 51%, transparent 51% 66%, rgba(3,25,38,0.18) 66% 67%, transparent 67% 100%);
+      }
+
+      .pin-mapa {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 76px;
+        height: 76px;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--borde);
+        border-radius: 50%;
+        background: rgba(255,255,255,0.3);
+      }
+
+      .pin-mapa::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--borde);
+        border-radius: 50%;
+        background: rgba(255,255,255,0.6);
+      }
+
+      .contacto {
+        padding: 32px 40px 60px;
+        text-align: center;
+      }
+
+      .formulario {
+        max-width: 760px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .campo {
+        flex: 1;
+        min-height: 60px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0 18px;
+        color: var(--gris-texto);
+      }
+
+      .boton-enviar {
+        min-width: 170px;
+        min-height: 60px;
+        border: 2px solid var(--borde);
+        border-radius: 10px;
+        background: var(--champagne);
+        color: var(--verde-oscuro);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      @media (max-width: 820px) {
+        .encabezado {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .menu {
+          justify-content: center;
+        }
+
+        .servicios-grid,
+        .contenido-doble,
+        .formulario {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .formulario {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header class="encabezado">
+        <h2 class="logo">Logo</h2>
+        <nav class="menu" aria-label="Menú principal">
+          <a href="#nosotros">About</a>
+          <a href="#servicios">Services</a>
+          <a href="#contacto">Contact</a>
+          <button class="boton-menu" type="button">Contact</button>
+        </nav>
+      </header>
+      <main>
+        <section class="hero" aria-label="Sección principal">
+          <div class="hero-contenido">
+            <h1>Headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="principal" type="button">Get Started</button>
+          </div>
+        </section>
+
+        <section class="seccion" id="servicios" aria-label="Nuestros servicios">
+          <h2 class="titulo-seccion">Our Services</h2>
+          <div class="servicios-grid" id="lista-servicios"></div>
+        </section>
+
+        <section class="seccion" id="nosotros" aria-label="Sobre nosotros">
+          <div class="contenido-doble">
+            <article class="tarjeta bloque-texto">
+              <h3>About us</h3>
+              <div class="linea"></div>
+              <div class="mini-lista">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span style="width: 70%;"></span>
+              </div>
+            </article>
+
+            <article class="tarjeta mapa" aria-label="Mapa de ubicación">
+              <div class="pin-mapa"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="contacto" id="contacto" aria-label="Contacto">
+          <h2 class="titulo-seccion">Contact us</h2>
+          <form class="formulario">
+            <input class="campo" type="email" placeholder="Correo electrónico" aria-label="Correo electrónico" />
+            <button class="boton-enviar" type="submit">Send</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="fetch.js"></script>
+  </body>
+</html>
