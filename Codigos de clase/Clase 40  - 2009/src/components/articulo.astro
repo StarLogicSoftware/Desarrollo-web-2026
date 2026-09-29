@@ -1,0 +1,16 @@
+---
+const { producto } = Astro.props
+---
+
+<article>
+    <h1>{producto.titulo}</h1>
+    <p>{producto.desc}</p>
+</article>
+
+<style>
+    article{
+        background-color: red;
+        padding: 32px;
+        color: white;
+    }
+</style>

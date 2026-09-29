@@ -1,0 +1,28 @@
+---
+import Articulo from "../components/articulo.astro";
+import Layout from "../layouts/Layout.astro";
+
+const productos = [
+	{ titulo: "algo 1", desc: "descripcion 1" },
+	{ titulo: "algo 2", desc: "descripcion 2" },
+	{ titulo: "algo 3", desc: "descripcion 3" },
+	{ titulo: "Termo", desc: "Es alto termo, aguanta mucho amiwo" },
+];
+// npm run build
+---
+
+<Layout titulo="Starlogic" desc="Principal">
+	<main>
+		<section>
+			{
+				productos.map((producto) => (
+					<Articulo producto={producto} />
+				))
+			}
+		</section>
+	</main>
+</Layout>
+
+<style>
+
+</style>

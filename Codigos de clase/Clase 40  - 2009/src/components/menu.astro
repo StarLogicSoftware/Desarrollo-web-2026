@@ -1,0 +1,32 @@
+---
+const { tituloBarra } = Astro.props
+---
+
+<header>
+	<h1>Stalogic - {tituloBarra}</h1>
+	<nav>
+		<a href="">Inicio</a>
+		<a href="">sobre nosotros</a>
+		<a href="/contacto">Contacto</a>
+		<a href="/productos">Productos</a>
+	</nav>
+</header>
+
+<style>
+	header {
+		height: 50px;
+		padding: 10px 50px;
+		background-color: rgb(134, 134, 234);
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	nav {
+		display: flex;
+		gap: 20px;
+		text-decoration: none;
+	}
+</style>
